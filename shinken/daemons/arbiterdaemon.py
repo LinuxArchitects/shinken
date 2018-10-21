@@ -685,7 +685,7 @@ class Arbiter(Daemon):
         self.last_master_speack = time.time()
 
         # Look for the master timeout
-        master_timeout = 300
+        master_timeout = 30
         for arb in self.conf.arbiters:
             if not arb.spare:
                 master_timeout = arb.check_interval * arb.max_check_attempts
